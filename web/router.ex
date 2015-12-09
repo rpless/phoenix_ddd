@@ -18,4 +18,15 @@ defmodule PhoenixDdd.Router do
 
     get "/", PageController, :index
   end
+
+  scope "/users" do
+    pipe_through :api
+    get "/:user_id", PhoenixDdd.UserController, :get_user
+  end
+
+  scope "/jobs" do
+    pipe_through :api
+    get "/:job_id", PhoenixDdd.JobController, :get_job
+    post "", PhoenixDdd.JobController, :submit_job
+  end
 end

@@ -2,7 +2,7 @@ defmodule PhoenixDdd.Repository.Job do
   alias PhoenixDdd.Persistence
   import Ecto.Query
 
-  def create(job) do
+  def submit(job) do
     insert = job |> to_persistence_model |> Persistence.insert
     case insert do
       {:error, change} -> {:error, change.message}
