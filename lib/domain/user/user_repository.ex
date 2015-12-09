@@ -12,7 +12,7 @@ defmodule PhoenixDdd.Repository.User do
   end
 
   defp to_domain_model(persistence_model) do
-    %PhoenixDdd.User{
+    %PhoenixDdd.Model.User{
       user_id: persistence_model.user_id,
       name: persistence_model.name,
       department: persistence_model.department

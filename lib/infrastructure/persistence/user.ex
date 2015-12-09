@@ -1,6 +1,6 @@
-defmodule PhoenixDdd.Persistance.User do
+defmodule PhoenixDdd.Persistence.User do
   use Ecto.Model
-  
+
   @primary_key {:user_id, :string, autogenerate: false}
 
   schema "users" do

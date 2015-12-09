@@ -1,4 +1,4 @@
-defmodule PhoenixDdd.User do
+defmodule PhoenixDdd.Model.User do
   defstruct [
     user_id: nil,
     name: nil,
