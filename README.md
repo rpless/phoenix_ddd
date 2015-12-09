@@ -6,7 +6,7 @@ This application simulates a system at a university that allows various users to
 The goal of the system is to try to show the concepts of Repositories, Domain Entities, and Ubiquitous Language from Domain Driven Design.
 It is by no means complete or authoritative.
 It is only an example of my experience implementing DDD with Phoenix.
-If you see a problem, want to help flesh it out more, or just have a question, feel free to open an issue or find me on the [Elixir Slack](elixir-lang.slack.com).
+If you see a problem, want to help flesh it out more, or just have a question, feel free to open an issue or find me on the [Elixir Slack](elixir-lang.slack.com) (I am `@rpless`).
 
 ## Running the App.
 To start your Phoenix app:
