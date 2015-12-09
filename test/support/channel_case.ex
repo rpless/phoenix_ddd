@@ -20,7 +20,7 @@ defmodule PhoenixDdd.ChannelCase do
       # Import conveniences for testing with channels
       use Phoenix.ChannelTest
 
-      alias PhoenixDdd.Repo
+      alias PhoenixDdd.Persistence
       import Ecto.Model
       import Ecto.Query, only: [from: 2]
 
@@ -32,7 +32,7 @@ defmodule PhoenixDdd.ChannelCase do
 
   setup tags do
     unless tags[:async] do
-      Ecto.Adapters.SQL.restart_test_transaction(PhoenixDdd.Repo, [])
+      Ecto.Adapters.SQL.restart_test_transaction(PhoenixDdd.Persistence, [])
     end
 
     :ok

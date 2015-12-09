@@ -10,7 +10,7 @@ config :phoenix_ddd, PhoenixDdd.Endpoint,
 config :logger, level: :warn
 
 # Configure your database
-config :phoenix_ddd, PhoenixDdd.Repo,
+config :phoenix_ddd, PhoenixDdd.Persistence,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
   password: "postgres",

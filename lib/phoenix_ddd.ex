@@ -10,7 +10,7 @@ defmodule PhoenixDdd do
       # Start the endpoint when the application starts
       supervisor(PhoenixDdd.Endpoint, []),
       # Start the Ecto repository
-      worker(PhoenixDdd.Repo, []),
+      worker(PhoenixDdd.Persistence, []),
       # Here you could define other workers and supervisors as children
       # worker(PhoenixDdd.Worker, [arg1, arg2, arg3]),
     ]

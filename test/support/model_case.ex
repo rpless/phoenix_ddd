@@ -16,7 +16,7 @@ defmodule PhoenixDdd.ModelCase do
 
   using do
     quote do
-      alias PhoenixDdd.Repo
+      alias PhoenixDdd.Persistence
       import Ecto.Model
       import Ecto.Query, only: [from: 2]
       import PhoenixDdd.ModelCase
@@ -25,7 +25,7 @@ defmodule PhoenixDdd.ModelCase do
 
   setup tags do
     unless tags[:async] do
-      Ecto.Adapters.SQL.restart_test_transaction(PhoenixDdd.Repo, [])
+      Ecto.Adapters.SQL.restart_test_transaction(PhoenixDdd.Persistence, [])
     end
 
     :ok

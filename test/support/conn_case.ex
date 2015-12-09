@@ -20,7 +20,7 @@ defmodule PhoenixDdd.ConnCase do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
 
-      alias PhoenixDdd.Repo
+      alias PhoenixDdd.Persistence
       import Ecto.Model
       import Ecto.Query, only: [from: 2]
 
@@ -33,7 +33,7 @@ defmodule PhoenixDdd.ConnCase do
 
   setup tags do
     unless tags[:async] do
-      Ecto.Adapters.SQL.restart_test_transaction(PhoenixDdd.Repo, [])
+      Ecto.Adapters.SQL.restart_test_transaction(PhoenixDdd.Persistence, [])
     end
 
     {:ok, conn: Phoenix.ConnTest.conn()}
