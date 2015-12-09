@@ -19,7 +19,7 @@ defmodule PhoenixDdd.Mixfile do
   def application do
     [mod: {PhoenixDdd, []},
      applications: [:phoenix, :phoenix_html, :cowboy, :logger,
-                    :ecto, :postgrex]]
+                    :ecto, :postgrex, :uuid]]
   end
 
   # Specifies which paths to compile per environment.
@@ -33,6 +33,7 @@ defmodule PhoenixDdd.Mixfile do
     [{:phoenix, "~> 1.0.4"},
      {:ecto, "~> 1.0"},
      {:postgrex, ">= 0.0.0"},
+     {:uuid, "~> 1.0.1"},
      {:phoenix_html, "~> 2.1"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:cowboy, "~> 1.0"}]
